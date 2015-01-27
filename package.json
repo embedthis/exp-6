@@ -1,0 +1,20 @@
+{
+    "name": "exp-6",
+    "description": "ES6 Transpile for Expansive",
+    "version": "0.2.0",
+    "pak": ">=0.10",
+    "keywords": [
+        "expansive-plugin",
+        "traceur"
+    ],
+    "licenses": "GPL",
+    "engines": {
+        "node": ">= 0.4.0"
+    },
+    "scripts": {
+        "postcache": {
+            "script": "Cmd.locate('traceur') || run('npm install -g traceur')"
+        }
+    },
+    "install": false
+}
