@@ -1,4 +1,4 @@
-exp-6
+exp-traceur
 ===
 
 Expansive plugin for Javascript ES6 files using Traceur to compile into ES5 Javascript.
@@ -7,7 +7,7 @@ Provides the 'compile-6' service.
 
 ### To install:
 
-    pak install exp-6
+    pak install exp-traceur
 
 ### To configure in expansive.json:
 

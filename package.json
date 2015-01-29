@@ -1,5 +1,5 @@
 {
-    "name": "exp-6",
+    "name": "exp-traceur",
     "description": "ES6 Transpile for Expansive",
     "version": "0.2.0",
     "pak": ">=0.10",

@@ -1,4 +1,4 @@
-exp-6 License
+exp-traceur License
 ===
 
 [GPL](http://www.gnu.org/licenses/gpl-2.0.html)
