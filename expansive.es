@@ -1,8 +1,9 @@
 Expansive.load({
     transforms: {
         name:   'compile-6',
-        input:  '6',
-        output: 'js',
+        mappings: {
+            '6': 'js'
+        },
         options: '-experimental',
         script: `
             function transform(contents, meta, service) {

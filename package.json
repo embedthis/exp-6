@@ -1,20 +1,25 @@
 {
     "name": "exp-traceur",
     "description": "ES6 Transpile for Expansive",
-    "version": "0.2.0",
-    "pak": ">=0.10",
+    "version": "0.2.1",
     "keywords": [
         "expansive-plugin",
         "traceur"
     ],
     "licenses": "GPL",
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/embedthis/exp-traceur.git"
+    },
     "engines": {
         "node": ">= 0.4.0"
     },
     "scripts": {
         "postcache": {
-            "script": "Cmd.locate('traceur') || run('npm install -g traceur')"
+            "script": "if (!Cmd.locate('traceur')) { if (!Cmd.locate('npm')) { throw 'Cannot locate the \"npm\" utility.' } else { run('npm install -g traceur')}}"
         }
     },
-    "install": false
+    "pak": {
+        "version": ">=0.10"
+    }
 }
