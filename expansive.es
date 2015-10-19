@@ -1,14 +1,21 @@
 Expansive.load({
-    transforms: {
-        name:   'compile-6',
-        mappings: {
-            '6': 'js'
-        },
+    services: {
+        name:    'traceur',
         options: '-experimental',
-        script: `
-            function transform(contents, meta, service) {
-                let traceur = Cmd.locate('traceur')
 
+        transforms: {
+            mappings: {
+                '6': 'js'
+            },
+
+            init: function(transform) {
+                transform.traceur = Cmd.locate('traceur')
+                if (!transform.traceur) {
+                    fatal('Cannot find traceur')
+                }
+            },
+
+            render: function(contents, meta) {
                 let file = meta.source
                 let path = file.dirname.join('.expansive')
                 let input = path.joinExt('.in.js', true)
@@ -28,6 +35,6 @@ Expansive.load({
                 }
                 return results
             }
-        `
+        }
     }
 })
