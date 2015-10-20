@@ -3,7 +3,7 @@ exp-traceur
 
 Expansive plugin for Javascript ES6 files using Traceur to compile into ES5 Javascript.
 
-Provides the 'compile-6' service.
+Provides the 'traceur' service.
 
 ### To install:
 
@@ -11,13 +11,14 @@ Provides the 'compile-6' service.
 
 ### To configure in expansive.json:
 
-* compile-6.enable &mdash; Enable the compile-65 service to process .js.6 files.
-* compile-6.options &mdash; Traceur options.
+* enable &mdash; Enable the traceur service.
+* mappings &mdash; Extensions to process. Defaults to { '6': 'js' }. This processes files with a '.js.6' extension.
+* options &mdash; Traceur options. Defaults to '-experimental'.
 
 ```
 {
     services: {
-        'compile-6': {
+        'traceur': {
             enable: true,
             options: '-experimental'
         }
